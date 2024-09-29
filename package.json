@@ -43,10 +43,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://mern-frontend-dn3i.onrender.com",
-  "render": {
     "proxy": {
       "/api": "https://mern-backend-cekc.onrender.com"
     }
-  }
 }
