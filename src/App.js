@@ -29,16 +29,29 @@ function App() {
           {/* Common Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
+          
+          {/*Redirect to Home page */}
+           {/*<Route path="/" element={<Navigate to="/login" />} /> */}
+          
           {/* User Routes */}
+
           <Route
-            path="/"
-            element= {
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-         />
+          path="/login" 
+          element={
+          <ProtectedRoute>
+                <Login />
+          </ProtectedRoute>
+          }
+          />
+          <Route
+          path="/" 
+          element={
+          <ProtectedRoute>
+                <Home />
+          </ProtectedRoute>
+          }
+          />
+
           <Route
             path="/user/write-exam/:id"
             element={
